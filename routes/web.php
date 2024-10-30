@@ -29,4 +29,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//pembimbing akademik
+Route::get('pembimbingakademik/dashboardpa', function () {
+    return view('pembimbingakademik/dashboardpa');
+});
+
+Route::get('pembimbingakademik/perwalian', function () {
+    return view('pembimbingakademik/perwalian');
+});
+
+Route::get('pembimbingakademik/halamanreview', function () {
+    return view('pembimbingakademik/halamanreview');
+});
+
+Route::get('pembimbingakademik/halamanirsmhs', function () {
+    return view('pembimbingakademik/halamanirsmhs');
+});
+
 require __DIR__.'/auth.php';
