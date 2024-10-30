@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +9,7 @@
 <body class="bg-gradient-to-b from-gray-800 to-blue-900 text-white font-sans">
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <div class="w-1/5 bg-gradient-to-b from-gray-900 to-gray-800 p-6">
+        <div class="w-1/6 bg-gradient-to-b from-gray-900 to-gray-800 p-6">
             <div class="text-2xl font-bold mb-8">SIRIS UNDIP</div>
             <nav class="space-y-4">
                 <a href="/dashboard" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
@@ -40,7 +39,7 @@
             </nav>
         </div>
         <!-- Main Content -->
-        <div class="flex-1 p-6">
+        <div class="flex-1 p-6 overflow-y-auto">
             <!-- Top Bar -->
             <div class="flex justify-between items-center mb-6">
                 <div class="relative w-1/3">
@@ -57,51 +56,48 @@
                 </div>
             </div>
             <!-- Breadcrumb -->
-            <div class="text-gray-400 mb-6">HOME / DASHBOARD</div>
-            <!-- Dashboard -->
-            <div class="bg-gray-700 p-6 rounded-lg mb-6">
-                <div class="flex items-center space-x-4">
-                    <div class="w-16 h-16 bg-gray-500 rounded-full"></div>
-                    <div>
-                        <div class="text-xl font-bold">SUTIKNO</div>
-                        <div class="text-gray-400">NIP: 197905242009121003</div>
-                        <div class="text-gray-400">LEKTOR | <span class="text-green-400">Informatika S1</span></div>
+            <div class="text-gray-400 mb-6">HOME / <span class="text-green-400">IRS</span></div>
+            <!-- Perwalian -->
+            <div>
+                <h1 class="text-2xl font-bold mb-4">Perwalian</h1>
+                <div class="grid grid-cols-3 gap-4 mb-8">
+                    <a href="/halamanreview" class="bg-green-500 p-6 rounded-lg relative">
+                        <span class="absolute top-2 right-2 text-white"><i class="fas fa-heart"></i></span>
+                        <div class="text-white text-lg">IRS</div>
+                    </a>
+                    <div class="bg-green-500 p-6 rounded-lg relative">
+                        <span class="absolute top-2 right-2 text-white"><i class="fas fa-heart"></i></span>
+                        <div class="text-white text-lg">KHS</div>
                     </div>
-                    <div class="ml-auto flex space-x-4">
-                        <button class="bg-green-500 text-white px-4 py-2 rounded-full">Dashboard</button>
-                        <button class="bg-gray-800 text-white px-4 py-2 rounded-full">Biodata</button>
-                        <button class="bg-gray-800 text-white px-4 py-2 rounded-full">Notifikasi</button>
+                    <div class="bg-green-500 p-6 rounded-lg relative">
+                        <span class="absolute top-2 right-2 text-white"><i class="fas fa-heart"></i></span>
+                        <div class="text-white text-lg">Pengajuan Cuti</div>
                     </div>
-                </div>
-            </div>
-            <!-- Timeline and Recently Accessed -->
-            <div class="grid grid-cols-2 gap-6">
-                <!-- Timeline -->
-                <div class="bg-gray-700 p-6 rounded-lg">
-                    <div class="flex justify-between items-center mb-4">
-                        <div class="text-xl font-bold">Timeline</div>
-                        <div class="flex space-x-2">
-                            <button class="bg-gray-800 text-white px-4 py-2 rounded-full">All</button>
-                            <button class="bg-gray-800 text-white px-4 py-2 rounded-full">Sort by dates</button>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-center justify-center h-48">
-                        <i class="fas fa-tasks text-4xl text-gray-500 mb-4"></i>
-                        <div class="text-gray-400">No activities require action</div>
+                    <div class="bg-green-500 p-6 rounded-lg relative">
+                        <span class="absolute top-2 right-2 text-white"><i class="fas fa-heart"></i></span>
+                        <div class="text-white text-lg">Perpanjangan Masa Studi</div>
                     </div>
                 </div>
-                <!-- Recently Accessed -->
-                <div class="bg-gray-700 p-6 rounded-lg">
-                    <div class="flex justify-between items-center mb-4">
-                        <div class="text-xl font-bold">Recently Accessed</div>
-                        <div class="flex space-x-2">
+                <div class="grid grid-cols-2 gap-4 h-64 overflow-y-auto">
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <div class="flex justify-between items-center mb-4">
                             <button class="bg-gray-800 text-white px-4 py-2 rounded-full">All</button>
-                            <button class="bg-gray-800 text-white px-4 py-2 rounded-full">Sort by dates</button>
+                            <button class="bg-gray-800 text-white px-4 py-2 rounded-full">Sort by dates <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="flex flex-col items-center justify-center h-32">
+                            <i class="fas fa-tasks text-4xl text-gray-500 mb-2"></i>
+                            <div class="text-gray-400">No activities require action</div>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center justify-center h-48">
-                        <i class="fas fa-tasks text-4xl text-gray-500 mb-4"></i>
-                        <div class="text-gray-400">No activities require action</div>
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <div class="flex justify-between items-center mb-4">
+                            <button class="bg-gray-800 text-white px-4 py-2 rounded-full">All</button>
+                            <button class="bg-gray-800 text-white px-4 py-2 rounded-full">Sort by dates <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="flex flex-col items-center justify-center h-32">
+                            <i class="fas fa-tasks text-4xl text-gray-500 mb-2"></i>
+                            <div class="text-gray-400">No activities require action</div>
+                        </div>
                     </div>
                 </div>
             </div>
