@@ -13,7 +13,7 @@
         <div class="w-1/5 bg-gradient-to-b from-gray-900 to-gray-800 p-6">
             <div class="text-2xl font-bold mb-8">SIRIS UNDIP</div>
             <nav class="space-y-4">
-                <a href="/dashboardpa" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/dashboard" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
                     <i class="fas fa-home"></i>
                     <span>Dashboard</span>
                 </a>
@@ -33,9 +33,16 @@
                     <i class="fas fa-cog"></i>
                     <span>Settings</span>
                 </a>
-                <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+
+                <!-- Logout-->
+                <form method="POST" action="{{ route('logout') }}" id="logout-form" style="display: none;">
+                    @csrf
+                </form>
+                <a href="#" 
+                class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4" 
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i>
-                    <span>Log Out</span>
+                    <span>{{ __('Log Out') }}</span>
                 </a>
             </nav>
         </div>
