@@ -26,8 +26,12 @@
                 <div class="flex">
                     <!-- Sidebar -->
                     <div class="w-1/4 space-y-4">
-                        <button onclick="window.location.href='/herreg';" class="w-full h-1/5 py-4 bg-gradient-to-r from-gray-400 to-gray-500 text-white rounded-lg text-lg font-semibold">Her-Registrasi</button>
-                        <button onclick="window.location.href='/akademik';" class="w-full h-1/5 py-4 bg-gradient-to-r from-gray-400 to-gray-500 text-white rounded-lg text-lg font-semibold">Akademik</button>
+                        <button onclick="window.location.href='{{ route('mahasiswa.herreg') }}';" class="w-full h-1/5 py-4 bg-gradient-to-r from-gray-400 to-gray-500 text-white rounded-lg text-lg font-semibold">
+                            Her-Registrasi
+                        </button>
+                        <button onclick="window.location.href='{{ route('mahasiswa.akademik') }}';" class="w-full h-1/5 py-4 bg-gradient-to-r from-gray-400 to-gray-500 text-white rounded-lg text-lg font-semibold">
+                            Akademik
+                        </button>
                         <button class="w-full h-1/5 py-4 bg-gradient-to-r from-gray-400 to-gray-500 text-white rounded-lg text-lg font-semibold">Jadwal Kuliah</button>
                         <button class="w-full h-1/5 py-4 bg-gradient-to-r from-gray-400 to-gray-500 text-white rounded-lg text-lg font-semibold">Kalender Akademik</button>
                     </div>
@@ -38,7 +42,7 @@
                             <div class="flex items-center space-x-4 mb-4">
                                 <i class="fas fa-user-circle text-white text-4xl"></i>
                                 <div>
-                                    <h1 class="text-white text-2xl font-bold">Nabila Betari Anjani</h1>
+                                    <h1 class="text-white text-2xl font-bold">{{ $user->name }}</h1>
                                     <p class="text-white">24060122140169 | Informatika S1</p>
                                 </div>
                             </div>

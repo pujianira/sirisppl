@@ -12,17 +12,6 @@ Route::get('/register', function () {
     return view('auth/register');
 });
 
-Route::get('mahasiswa/herreg', function () {
-    return view('mahasiswa/herreg');
-});
-
-Route::get('mahasiswa/akademik', function () {
-    return view('mahasiswa/akademik');
-});
-
-Route::get('mahasiswa/isiirs', function () {
-    return view('mahasiswa/isiirs');
-});
 
 
 Route::middleware('auth')->group(function () {
@@ -45,7 +34,25 @@ Route::get('pembimbingakademik/halamanirsmhs', function () {
 });
 
 //mahasiswa
-Route::get('mahasiswa/dashboard', [HomeController::class, 'mahasiswaDashboard'])->name('mahasiswa.dashboard');
+Route::middleware(['auth', 'mahasiswa'])->group(function () {
+    // Mahasiswa Dashboard
+    Route::get('mahasiswa/dashboard', [HomeController::class, 'mahasiswaDashboard'])->name('mahasiswa.dashboard');
+
+    // HER Registrasi
+    Route::get('mahasiswa/herreg', function () {
+        return view('mahasiswa.herreg');
+    })->name('mahasiswa.herreg');
+
+    // Akademik
+    Route::get('mahasiswa/akademik', function () {
+        return view('mahasiswa.akademik');
+    })->name('mahasiswa.akademik');
+
+    // ISIIRS
+    Route::get('mahasiswa/isiirs', function () {
+        return view('mahasiswa.isiirs');
+    })->name('mahasiswa.isiirs');
+});
 
 //dekan
 Route::get('dekan/dashboard', [HomeController::class, 'dekanDashboard'])
@@ -63,9 +70,8 @@ Route::get('kaprodi/dashboard', [HomeController::class, 'kaprodiDashboard'])
     ->name('kaprodi.dashboard');
 
 //pembimbing akademik
-Route::get('pembimbingakademik/dashboard', [HomeController::class, 'pembimbingakademikDashboard'])
-    ->middleware(['auth', 'pembimbingakademik'])
-    ->name('pembimbingakademik.dashboard');
+Route::get('mahasiswa/dashboard', [HomeController::class, 'mahasiswaDashboard'])->name('mahasiswa.dashboard');
+Route::get('pembimbingakademik/dashboard', [HomeController::class, 'pembimbingAkademikDashboard'])->name('pembimbingakademik.dashboard');
 
 
 require __DIR__.'/auth.php';
