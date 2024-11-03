@@ -27,8 +27,28 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+        if($request->user()->usertype === 'pembimbingakademik')
+        {
+            return redirect('pembimbingakademik/dashboardpa');
+        }
+        elseif($request->user()->usertype === 'kaprodi')
+        {
+            return redirect('kaprodi/dashboard');
+        }
+        elseif($request->user()->usertype === 'dekan')
+        {
+            return redirect('dekan/dashboard');
+        }
+        elseif($request->user()->usertype === 'bagianakademik')
+        {
+            return redirect('bagianakademik/dashboard');
+        }
+        elseif($request->user()->usertype === 'mahasiswa')
+        {
+            return redirect('mahasiswa/dashboard');
+        }
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        return redirect()->intended(route('login'));
     }
 
     /**

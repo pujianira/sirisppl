@@ -17,7 +17,7 @@
                     <i class="fas fa-home"></i>
                     <span>Dashboard</span>
                 </a>
-                <a href="/perwalian" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/pembimbingakademik/perwalian" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
                     <i class="fas fa-user-friends"></i>
                     <span>Perwalian</span>
                 </a>

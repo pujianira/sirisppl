@@ -20,6 +20,7 @@
                 </div>
 
                 <div class="bg-blue-900 overflow-hidden shadow-sm sm:rounded-lg w-full h-80 flex justify-center items-center">
+                    <a href="/isiirs">
                     <div class="p-4 text-white text-3xl">
                         {{ __("Buat IRS") }}
                     </div>

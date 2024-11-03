@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('auth/login');
@@ -11,17 +12,18 @@ Route::get('/register', function () {
     return view('auth/register');
 });
 
-Route::get('/herreg', function () {
-    return view('herreg');
+Route::get('mahasiswa/herreg', function () {
+    return view('mahasiswa/herreg');
 });
 
-Route::get('/akademik', function () {
-    return view('akademik');
+Route::get('mahasiswa/akademik', function () {
+    return view('mahasiswa/akademik');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('mahasiswa/isiirs', function () {
+    return view('mahasiswa/isiirs');
+});
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -29,10 +31,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//pembimbing akademik
-Route::get('pembimbingakademik/dashboardpa', function () {
-    return view('pembimbingakademik/dashboardpa');
-});
 
 Route::get('pembimbingakademik/perwalian', function () {
     return view('pembimbingakademik/perwalian');
@@ -45,5 +43,29 @@ Route::get('pembimbingakademik/halamanreview', function () {
 Route::get('pembimbingakademik/halamanirsmhs', function () {
     return view('pembimbingakademik/halamanirsmhs');
 });
+
+//mahasiswa
+Route::get('mahasiswa/dashboard', [HomeController::class, 'mahasiswaDashboard'])->name('mahasiswa.dashboard');
+
+//dekan
+Route::get('dekan/dashboard', [HomeController::class, 'dekanDashboard'])
+    ->middleware(['auth', 'dekan'])
+    ->name('dekan.dashboard');
+
+//bagian akademik
+Route::get('bagianakademik/dashboard', [HomeController::class, 'bagianakademikDashboard'])
+    ->middleware(['auth', 'bagianakademik'])
+    ->name('bagianakademik.dashboard');
+
+//kaprodi
+Route::get('kaprodi/dashboard', [HomeController::class, 'kaprodiDashboard'])
+    ->middleware(['auth', 'kaprodi'])
+    ->name('kaprodi.dashboard');
+
+//pembimbing akademik
+Route::get('pembimbingakademik/dashboard', [HomeController::class, 'pembimbingakademikDashboard'])
+    ->middleware(['auth', 'pembimbingakademik'])
+    ->name('pembimbingakademik.dashboard');
+
 
 require __DIR__.'/auth.php';
