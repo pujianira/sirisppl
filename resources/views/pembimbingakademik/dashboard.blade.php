@@ -13,7 +13,7 @@
         <div class="w-1/5 bg-gradient-to-b from-gray-900 to-gray-800 p-6">
             <div class="text-2xl font-bold mb-8">SIRIS UNDIP</div>
             <nav class="space-y-4">
-                <a href="/dashboard" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/pembimbingakademik/dashboard" class="flex items-center space-x-2 text-white-400 hover:text-white py-2 px-4 font-bold hover:font-bold active:font-bold">
                     <i class="fas fa-home"></i>
                     <span>Dashboard</span>
                 </a>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <!-- Breadcrumb -->
-            <div class="text-gray-400 mb-6">HOME / DASHBOARD</div>
+            <!-- <div class="text-gray-400 mb-6">HOME / DASHBOARD</div> -->
             <!-- Dashboard -->
             <div class="bg-gray-700 p-6 rounded-lg mb-6">
                 <div class="flex items-center space-x-4">
