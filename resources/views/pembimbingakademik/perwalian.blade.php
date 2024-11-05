@@ -9,14 +9,14 @@
 <body class="bg-gradient-to-b from-gray-800 to-blue-900 text-white font-sans">
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <div class="w-1/6 bg-gradient-to-b from-gray-900 to-gray-800 p-6">
+        <div class="w-1/5 bg-gradient-to-b from-gray-900 to-gray-800 p-6">
             <div class="text-2xl font-bold mb-8">SIRIS UNDIP</div>
             <nav class="space-y-4">
-                <a href="{{ route('pembimbingakademik.dashboard') }}" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/pembimbingakademik/dashboard" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
                     <i class="fas fa-home"></i>
                     <span>Dashboard</span>
                 </a>
-                <a href="/perwalian" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/pembimbingakademik/perwalian" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
                     <i class="fas fa-user-friends"></i>
                     <span>Perwalian</span>
                 </a>
@@ -61,7 +61,7 @@
             <div>
                 <h1 class="text-2xl font-bold mb-4">Perwalian</h1>
                 <div class="grid grid-cols-3 gap-4 mb-8">
-                    <a href="/halamanreview" class="bg-green-500 p-6 rounded-lg relative">
+                    <a href="/pembimbingakademik/halamanrevie" class="bg-green-500 p-6 rounded-lg relative">
                         <span class="absolute top-2 right-2 text-white"><i class="fas fa-heart"></i></span>
                         <div class="text-white text-lg">IRS</div>
                     </a>
