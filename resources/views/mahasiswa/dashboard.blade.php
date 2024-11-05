@@ -1,10 +1,8 @@
-<html>
-<head>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
 <x-app-layout>
     <x-slot name="header">
+        <h3 class="font-semibold text-xl text-white leading-tight">
+            {{ __('Dashboard') }}
+        </h3>
         <body class="bg-gradient-to-b from-blue-900 to-blue-700 min-h-screen flex flex-col items-center">
             <div class="w-full max-w-6xl p-4">
                 <!-- Top Navigation -->
@@ -12,7 +10,7 @@
                     <div class="flex items-center space-x-4">
                         <div class="flex items-center space-x-2">
                             <i class="fas fa-user-circle text-white text-2xl"></i>
-                            <span class="text-white">Halo! Nabila Betari</span>
+                            <span class="text-white">Halo! {{ $user->name }}</span>
                         </div>
                         <i class="fas fa-cog text-white text-xl"></i>
                         <i class="fas fa-bell text-white text-xl"></i>
@@ -86,4 +84,3 @@
         </body>
     </x-slot>
 </x-app-layout>
-</html>
