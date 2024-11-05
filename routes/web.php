@@ -20,19 +20,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-Route::get('pembimbingakademik/perwalian', function () {
-    return view('pembimbingakademik/perwalian');
-});
-
-Route::get('pembimbingakademik/halamanreview', function () {
-    return view('pembimbingakademik/halamanreview');
-});
-
-Route::get('pembimbingakademik/halamanirsmhs', function () {
-    return view('pembimbingakademik/halamanirsmhs');
-});
-
 //mahasiswa
 Route::middleware(['auth', 'mahasiswa'])->group(function () {
     // Mahasiswa Dashboard
@@ -72,6 +59,22 @@ Route::get('kaprodi/dashboard', [HomeController::class, 'kaprodiDashboard'])
 //pembimbing akademik
 Route::get('mahasiswa/dashboard', [HomeController::class, 'mahasiswaDashboard'])->name('mahasiswa.dashboard');
 Route::get('pembimbingakademik/dashboard', [HomeController::class, 'pembimbingAkademikDashboard'])->name('pembimbingakademik.dashboard');
+Route::get('pembimbingakademik/perwalian', function () {
+    return view('pembimbingakademik/perwalian');
+});
+
+Route::get('pembimbingakademik/halamanrevie', function () {
+    return view('pembimbingakademik/halamanrevie');
+});
+
+Route::get('pembimbingakademik/halamanirsmhs', function () {
+    return view('pembimbingakademik/halamanirsmhs');
+});
+
+Route::get('pembimbingakademik/halamankhsmhs', function () {
+    return view('pembimbingakademik/halamankhsmhs');
+});
+
 
 
 require __DIR__.'/auth.php';
