@@ -75,6 +75,8 @@ Route::get('pembimbingakademik/halamankhsmhs', function () {
     return view('pembimbingakademik/halamankhsmhs');
 });
 
-
+Route::get('pembimbingakademik/halamantranskripmhs', function () {
+    return view('pembimbingakademik/halamantranskripmhs');
+});
 
 require __DIR__.'/auth.php';

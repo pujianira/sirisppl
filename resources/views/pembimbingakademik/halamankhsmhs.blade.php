@@ -13,11 +13,11 @@
         <div class="w-1/5 bg-gradient-to-b from-gray-900 to-gray-800 p-6">
             <div class="text-2xl font-bold mb-8">SIRIS UNDIP</div>
             <nav class="space-y-4">
-                <a href="/pembimbingakademik/dashboardpa" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/pembimbingakademik/dashboard" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
                     <i class="fas fa-home"></i>
                     <span>Dashboard</span>
                 </a>
-                <a href="/pembimbingakademik/perwalian" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/pembimbingakademik/perwalian" class="flex items-center space-x-2 text-white-400 hover:text-white py-2 px-4 font-bold hover:font-bold active:font-bold">
                     <i class="fas fa-user-friends"></i>
                     <span>Perwalian</span>
                 </a>
@@ -33,9 +33,15 @@
                     <i class="fas fa-cog"></i>
                     <span>Settings</span>
                 </a>
-                <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <!-- Logout-->
+                <form method="POST" action="{{ route('logout') }}" id="logout-form" style="display: none;">
+                    @csrf
+                </form>
+                <a href="#" 
+                class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4" 
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i>
-                    <span>Log Out</span>
+                    <span>{{ __('Log Out') }}</span>
                 </a>
             </nav>
         </div>
@@ -57,14 +63,14 @@
                 </div>
             </div>
             <!-- Breadcrumb -->
-            <div class="text-gray-400 mb-6">HOME / IRS</div>
+            <!-- <div class="text-gray-400 mb-6">HOME / IRS</div> -->
             <!-- Content -->
             <div>
                 <h1 class="text-2xl font-bold mb-4">KHS Mahasiswa</h1>
-                <div class="flex space-x-8 mb-4">
-                <a href="/pembimbingakademik/halamanirsmhs" id="link-irs" class="text-gray-400" onclick="setActiveLink('irs')">IRS</a>
-                <a href="/pembimbingakademik/halamankhsmhs" id="link-khs" class="text-gray-400" onclick="setActiveLink('khs')">KHS</a>
-                <a href="/pembimbingakademik/halamantranskripmhs" id="link-transkrip" class="text-gray-400" onclick="setActiveLink('transkrip')">Transkrip</a>
+                <div class="flex justify-between mb-4">
+                <a href="/pembimbingakademik/halamanirsmhs" id="link-irs" class="flex-1 text-center text-gray-400" >IRS</a>
+                <a href="/pembimbingakademik/halamankhsmhs" id="link-khs" class="flex-1 text-center border-b-2 border-white pb-2" >KHS</a>
+                <a href="/pembimbingakademik/halamantranskripmhs" id="link-transkrip" class="flex-1 text-center text-gray-400">Transkrip</a>
                 </div>
                 <div>
                     <h2 class="text-xl font-semibold mb-4">Kartu Hasil Studi (KHS)</h2>
@@ -118,24 +124,6 @@
             // Mengubah ikon
             icon.textContent = content.classList.contains('hidden') ? '+' : '-';
         }
-        function setActiveLink(active) {
-        const links = [
-            { id: 'link-irs', name: 'irs' },
-            { id: 'link-khs', name: 'khs' },
-            { id: 'link-transkrip', name: 'transkrip' }
-        ];
-
-        links.forEach(link => {
-            const element = document.getElementById(link.id);
-            if (link.name === active) {
-                element.classList.add('border-b-2', 'border-white', 'pb-2', 'font-bold');
-                element.classList.remove('text-gray-400');
-            } else {
-                element.classList.remove('border-b-2', 'border-white', 'pb-2', 'font-bold');
-                element.classList.add('text-gray-400');
-            }
-        });
-    }
     </script>
 </body>
 </html>

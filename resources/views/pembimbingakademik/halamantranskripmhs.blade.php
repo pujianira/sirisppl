@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRS Mahasiswa</title>
+    <title>Transkrip Mahasiswa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -66,15 +66,15 @@
             <!-- <div class="text-gray-400 mb-6">HOME / IRS</div> -->
             <!-- Content -->
             <div>
-                <h1 class="text-2xl font-bold mb-4">IRS Mahasiswa</h1>
+                <h1 class="text-2xl font-bold mb-4">Transkrip Mahasiswa</h1>
                 <div class="flex justify-between mb-4">
-                <a href="/pembimbingakademik/halamanirsmhs" id="link-irs" class="flex-1 text-center border-b-2 border-white pb-2" >IRS</a>
+                <a href="/pembimbingakademik/halamanirsmhs" id="link-irs" class="flex-1 text-center text-gray-400" >IRS</a>
                 <a href="/pembimbingakademik/halamankhsmhs" id="link-khs" class="flex-1 text-center text-gray-400" >KHS</a>
-                <a href="/pembimbingakademik/halamantranskripmhs" id="link-transkrip" class="flex-1 text-center text-gray-400">Transkrip</a>
+                <a href="/pembimbingakademik/halamantranskripmhs" id="link-transkrip" class="flex-1 text-center border-b-2 border-white pb-2">Transkrip</a>
 
                 </div>
                 <div>
-                    <h2 class="text-xl font-semibold mb-4">Isian Rencana Semester (IRS)</h2>
+                    <h2 class="text-xl font-semibold mb-4">Transkrip Akademik</h2>
                     <ul class="space-y-4">
                         <!-- Accordion Item 1 -->
                         <li class="border-b border-gray-600 pb-2">

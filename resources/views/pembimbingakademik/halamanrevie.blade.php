@@ -12,11 +12,11 @@
         <div class="w-1/5 bg-gradient-to-b from-gray-900 to-gray-800 p-6">
             <div class="text-2xl font-bold mb-8">SIRIS UNDIP</div>
             <nav class="space-y-4">
-                <a href="/pembimbingakademik/dashboardpa" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/pembimbingakademik/dashboard" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
                     <i class="fas fa-home"></i>
                     <span>Dashboard</span>
                 </a>
-                <a href="/pembimbingakademik/perwalian" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/pembimbingakademik/perwalian" class="flex items-center space-x-2 text-white-400 hover:text-white py-2 px-4 font-bold hover:font-bold active:font-bold">
                     <i class="fas fa-user-friends"></i>
                     <span>Perwalian</span>
                 </a>
@@ -32,9 +32,15 @@
                     <i class="fas fa-cog"></i>
                     <span>Settings</span>
                 </a>
-                <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <!-- Logout-->
+                <form method="POST" action="{{ route('logout') }}" id="logout-form" style="display: none;">
+                    @csrf
+                </form>
+                <a href="#" 
+                class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4" 
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i>
-                    <span>Log Out</span>
+                    <span>{{ __('Log Out') }}</span>
                 </a>
             </nav>
         </div>
@@ -56,10 +62,10 @@
                 </div>
             </div>
             <!-- Breadcrumb -->
-            <div class="text-gray-400 mb-6">HOME / IRS</div>
+            <!-- <div class="text-gray-400 mb-6">HOME / IRS</div> -->
             <!-- Content -->
             <div>
-                <h1 class="text-2xl font-bold mb-4">Review IRS Mahasiswa</h1>
+                <!-- <h1 class="text-2xl font-bold mb-4">Review IRS Mahasiswa</h1> -->
                 <div class="mb-4">
                     <div class="mb-4 flex items-center">
                         <span class="mr-2 w-24">Angkatan :</span>
@@ -102,12 +108,15 @@
                                 <th class="p-4">Jalur Masuk</th>
                                 <th class="p-4">IP Lalu</th>
                                 <th class="p-4">SKS Diambil</th>
+                                <th class="p-4">Status IRS</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-300">
                             <tr class="border-b border-gray-700">
                                 <td class="p-4 flex items-center space-x-2">
-                                    <a href="/pembimbingakademik/halamanirsmhs" class="px-4 py-2 bg-blue-600 rounded text-white inline-block">Review</a>
+                                <a href="/pembimbingakademik/halamanirsmhs" class="px-4 py-2 bg-blue-600 rounded text-white inline-block">
+                                    <i class="fas fa-search"></i> 
+                                </a>
                                 </td>
                                 <td class="p-4">AURA ARFANINSA AZ ZAHRA</td>
                                 <td class="p-4">24060122130097</td>
@@ -117,7 +126,7 @@
                                 <td class="p-4">3.88</td>
                                 <td class="p-4">85</td>
                                 <td class="p-4">
-                                    <span class="px-2 py-1 bg-orange-500 rounded text-white">Belum Disetujui</span>
+                                    <span class="block px-2 py-1 bg-yellow-500 rounded text-white w-full text-center font-bold">Belum Disetujui</span>
                                 </td>
                             </tr>
                         </tbody>

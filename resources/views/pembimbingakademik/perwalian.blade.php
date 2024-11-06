@@ -16,7 +16,7 @@
                     <i class="fas fa-home"></i>
                     <span>Dashboard</span>
                 </a>
-                <a href="/pembimbingakademik/perwalian" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <a href="/pembimbingakademik/perwalian" class="flex items-center space-x-2 text-white-400 hover:text-white py-2 px-4 font-bold hover:font-bold active:font-bold">
                     <i class="fas fa-user-friends"></i>
                     <span>Perwalian</span>
                 </a>
@@ -32,9 +32,15 @@
                     <i class="fas fa-cog"></i>
                     <span>Settings</span>
                 </a>
-                <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4">
+                <!-- Logout-->
+                <form method="POST" action="{{ route('logout') }}" id="logout-form" style="display: none;">
+                    @csrf
+                </form>
+                <a href="#" 
+                class="flex items-center space-x-2 text-gray-400 hover:text-white py-2 px-4" 
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i>
-                    <span>Log Out</span>
+                    <span>{{ __('Log Out') }}</span>
                 </a>
             </nav>
         </div>
@@ -56,7 +62,7 @@
                 </div>
             </div>
             <!-- Breadcrumb -->
-            <div class="text-gray-400 mb-6">HOME / <span class="text-green-400">IRS</span></div>
+            <!-- <div class="text-gray-400 mb-6">HOME / <span class="text-green-400">IRS</span></div> -->
             <!-- Perwalian -->
             <div>
                 <h1 class="text-2xl font-bold mb-4">Perwalian</h1>
@@ -65,10 +71,10 @@
                         <span class="absolute top-2 right-2 text-white"><i class="fas fa-heart"></i></span>
                         <div class="text-white text-lg">IRS</div>
                     </a>
-                    <div class="bg-green-500 p-6 rounded-lg relative">
+                    <a href="/pembimbingakademik/halamanrevie" class="bg-green-500 p-6 rounded-lg relative">
                         <span class="absolute top-2 right-2 text-white"><i class="fas fa-heart"></i></span>
                         <div class="text-white text-lg">KHS</div>
-                    </div>
+                    </a>
                     <div class="bg-green-500 p-6 rounded-lg relative">
                         <span class="absolute top-2 right-2 text-white"><i class="fas fa-heart"></i></span>
                         <div class="text-white text-lg">Pengajuan Cuti</div>
