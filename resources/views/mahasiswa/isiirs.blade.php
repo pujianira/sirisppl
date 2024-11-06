@@ -1,19 +1,15 @@
-<html>
-<head>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
-</head>
 <x-app-layout>
     <x-slot name="header">
-        <body class="bg-gradient-to-b from-blue-900 to-blue-700 min-h-screen flex flex-col items-center">
+        <h3 class="font-semibold text-xl text-white leading-tight">
+            {{ __('Dashboard') }}
+        </h3>
+    </x-slot>
+
+    <body class="bg-gradient-to-r from-blue-900 to-indigo-900 text-white h-screen flex">
+        <div class="flex w-full h-full">
+            {{-- Data Mahasiswa --}}
             <div class="w-1/4 p-4">
-                <div class="bg-gray-700 p-4 rounded-lg mb-4">
+                <div class="bg-white p-4 rounded-lg mb-4">
                     <h1 class="text-lg font-semibold mb-2">SIRIS UNDIP</h1>
                     <p class="text-xs">Nama : NABILA BETARI ANJANI</p>
                     <p class="text-xs">NIM : 24060122140169</p>
@@ -24,14 +20,79 @@
                     <p class="text-xs">IPS (semester lalu) : 4,00</p>
                     <p class="text-xs">Max. Beban SKS (saat ini) : 24</p>
                 </div>
-                <button class="bg-blue-800 w-full py-2 rounded-lg mb-4 text-xs">Refresh IRS</button>
-                <div class="bg-gray-700 p-3 rounded-lg mb-4 flex items-center">
-                    <i class="fas fa-search text-lg mr-2"></i>
-                    <span class="text-xs">Cari Mata Kuliah</span>
-                </div>
-                <button class="bg-blue-800 w-full py-2 rounded-lg text-xs">Mata Kuliah Terpilih</button>
+                <button class="bg-white w-full py-2 rounded-lg mb-4 text-xs">Refresh IRS</button>
+                <button class="bg-white w-full py-2 rounded-lg mb-4 text-xs">Cari Mata Kuliah</button>
+                <button class="bg-white w-full py-2 rounded-lg text-xs">Mata Kuliah Terpilih</button>
             </div>
-        </body>
-    </x-slot>
+
+            {{-- Main Content Jadwal --}}
+            <div class="w-3/4 p-4">
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <div class="grid grid-cols-6 gap-2 text-left text-gray-300 text-xs">
+                        <div>Waktu</div>
+                        <div>Senin</div>
+                        <div>Selasa</div>
+                        <div>Rabu</div>
+                        <div>Kamis</div>
+                        <div>Jumat</div>
+                    </div>
+                    <!-- The timetable content goes here -->
+                    <div class="grid grid-cols-6 gap-2 mt-2 text-left text-gray-300 text-xs">
+                        <div>06.00</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="grid grid-cols-6 gap-2 mt-2 text-left text-gray-300 text-xs">
+                        <div>07.00</div>
+                        <div class="bg-yellow-400 text-black p-2 rounded-lg">
+                            <p>Teori Bahasa dan Otomata</p>
+                            <p>WAJIB (KM2020)</p>
+                            <p>(SMT 7) (3 SKS)</p>
+                            <p>Kelas: C 3/3 SKS</p>
+                            <p>07:00 - 09:30</p>
+                        </div>
+                        <div></div>
+                        <div class="bg-blue-900 p-2 rounded-lg">
+                            <p>Komputasi Tersebar dan Paralel</p>
+                            <p>WAJIB (KM2020)</p>
+                            <p>(SMT 5) (3 SKS)</p>
+                            <p>Kelas: C 3/3 SKS</p>
+                            <p>07:00 - 09:30</p>
+                        </div>
+                        <div class="bg-blue-900 p-2 rounded-lg">
+                            <p>Proyek Perangkat Lunak</p>
+                            <p>WAJIB (KM2020)</p>
+                            <p>(SMT 5) (3 SKS)</p>
+                            <p>Kelas: C 3/3 SKS</p>
+                            <p>07:00 - 09:30</p>
+                        </div>
+                        <div class="bg-blue-900 p-2 rounded-lg">
+                            <p>Sistem Informasi</p>
+                            <p>WAJIB (KM2020)</p>
+                            <p>(SMT 5) (3 SKS)</p>
+                            <p>Kelas: C 3/3 SKS</p>
+                            <p>07:00 - 09:30</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-6 gap-2 mt-2 text-left text-gray-300 text-xs">
+                        <div>08.00</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="bg-blue-900 p-2 rounded-lg">
+                            <p>Pengembangan Berbasis Proyek</p>
+                            <p>WAJIB (KM2020)</p>
+                            <p>(SMT 5) (3 SKS)</p>
+                            <p>Kelas: C 3/3 SKS</p>
+                            <p>07:00 - 09:30</p>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </x-app-layout>
-</html>
