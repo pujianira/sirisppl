@@ -46,6 +46,18 @@ Route::get('dekan/dashboard', [HomeController::class, 'dekanDashboard'])
     ->middleware(['auth', 'dekan'])
     ->name('dekan.dashboard');
 
+Route::get('dekan/perkuliahan', function () {
+    return view('dekan/perkuliahan');
+    });
+
+Route::get('dekan/jadwal', function () {
+    return view('dekan/jadwal');
+    });
+
+Route::get('dekan/lihatjadwal', function () {
+    return view('dekan/lihatjadwal');
+    });
+
 //bagian akademik
 Route::get('bagianakademik/dashboard', [HomeController::class, 'bagianakademikDashboard'])
     ->middleware(['auth', 'bagianakademik'])
