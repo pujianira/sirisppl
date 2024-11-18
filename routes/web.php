@@ -66,24 +66,6 @@ Route::get('kaprodi/dashboard', [HomeController::class, 'kaprodiDashboard'])
     ->middleware(['auth', 'kaprodi'])
     ->name('kaprodi.dashboard');
 
-Route::get('kaprodi/perkuliahan', function () {
-    return view('kaprodi/perkuliahan');
-});
-
-Route::get('kaprodi/jadwal', function () {
-    return view('kaprodi/jadwal');
-});
-
-Route::get('kaprodi/formjadwal', function () {
-    return view('kaprodi/formjadwal');
-});
-
-Route::get('kaprodi/buatjadwalbaru', function () {
-    return view('kaprodi/buatjadwalbaru');
-});
-
-
-
 //pembimbing akademik
 Route::get('mahasiswa/dashboard', [HomeController::class, 'mahasiswaDashboard'])->name('mahasiswa.dashboard');
 Route::get('pembimbingakademik/dashboard', [HomeController::class, 'pembimbingAkademikDashboard'])->name('pembimbingakademik.dashboard');
