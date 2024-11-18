@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review IRS Mahasiswa</title>
+    <title>Mahasiswa Perwalian</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -94,7 +94,6 @@
                     <button class="bg-yellow-500 text-white px-4 py-2 rounded">IRS Belum Disetujui<br><strong>12</strong></button>
                     <button class="bg-green-500 text-white px-4 py-2 rounded">IRS Sudah Disetujui<br><strong>12</strong></button>
                 </div>
-                
                 <!-- Table -->
                 <div class="overflow-x-auto">
                     <table class="min-w-full bg-gray-800 rounded-lg">

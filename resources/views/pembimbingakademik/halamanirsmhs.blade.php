@@ -84,12 +84,37 @@
                                 <span class="accordion-icon">+</span> <!-- Ikon di sini -->
                             </button>
                             <div class="accordion-content mt-2 hidden text-gray-400">
-                                <p>Detail mata kuliah:</p>
-                                <ul class="pl-4 list-disc">
-                                    <li>Dasar Pemrograman - 3 SKS</li>
-                                    <li>Matematika I - 2 SKS</li>
-                                    <li>Olahraga - 1 SKS</li>
-                                </ul>
+                                <div class="flex justify-center items-center">
+                                <div class="text-lg font-bold mb-4 text-white">IRS MAHASISWA (BELUM DISETUJUI WALI)</div>
+                                </div>
+                                <table class="w-full text-sm text-center text-white">
+                                    <thead class="text-xs uppercase bg-gray-800 text-white">
+                                        <tr>
+                                            <th scope="col" class="py-3 px-6">NO</th>
+                                            <th scope="col" class="py-3 px-6">KODE</th>
+                                            <th scope="col" class="py-3 px-6">WAKTU</th>
+                                            <th scope="col" class="py-3 px-6">MATA KULIAH</th>
+                                            <th scope="col" class="py-3 px-6">KELAS</th>
+                                            <th scope="col" class="py-3 px-6">SKS</th>
+                                            <th scope="col" class="py-3 px-6">NAMA DOSEN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-gray-700 border-b border-gray-700">
+                                            <td class="py-4 px-6">1</td>
+                                            <td class="py-4 px-6">PAIK6702</td>
+                                            <td class="py-4 px-6">Senin, 07:00 - 09:30</td>
+                                            <td class="py-4 px-6">Teori Bahasa dan Otomata</td>
+                                            <td class="py-4 px-6">C</td>
+                                            <td class="py-4 px-6">3</td>
+                                            <td class="text-left py-4 px-6">Priyo Sidik Sasongko, S.Si., M.Kom.<br>Etna Vianita, S.Mat., M.Mat.<br>Dr. Yeva Fadillah Ashari, S.Si., M.Si.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="flex justify-center space-x-4 mt-6">
+                                    <button class="bg-green-500 text-white px-4 py-2 rounded-full">Setujui IRS</button>
+                                    <button class="bg-yellow-500 text-white px-4 py-2 rounded-full">Berikan Izin Melakukan Perubahan IRS</button>
+                                </div>
                             </div>
                         </li>
                         <!-- Accordion Item 2 -->
@@ -100,12 +125,37 @@
                                 <span class="accordion-icon">+</span> <!-- Ikon di sini -->
                             </button>
                             <div class="accordion-content mt-2 hidden text-gray-400">
-                                <p>Detail mata kuliah:</p>
-                                <ul class="pl-4 list-disc">
-                                    <li>Fisika Dasar - 3 SKS</li>
-                                    <li>Bahasa Inggris - 2 SKS</li>
-                                    <li>Matematika II - 3 SKS</li>
-                                </ul>
+                            <div class="flex justify-center items-center">
+                                <div class="text-lg font-bold mb-4 text-white">IRS MAHASISWA (BELUM DISETUJUI WALI)</div>
+                                </div>
+                                <table class="w-full text-sm text-center text-white">
+                                    <thead class="text-xs uppercase bg-gray-800 text-white">
+                                        <tr>
+                                            <th scope="col" class="py-3 px-6">NO</th>
+                                            <th scope="col" class="py-3 px-6">KODE</th>
+                                            <th scope="col" class="py-3 px-6">WAKTU</th>
+                                            <th scope="col" class="py-3 px-6">MATA KULIAH</th>
+                                            <th scope="col" class="py-3 px-6">KELAS</th>
+                                            <th scope="col" class="py-3 px-6">SKS</th>
+                                            <th scope="col" class="py-3 px-6">NAMA DOSEN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-gray-700 border-b border-gray-700">
+                                            <td class="py-4 px-6">1</td>
+                                            <td class="py-4 px-6">PAIK6702</td>
+                                            <td class="py-4 px-6">Senin, 07:00 - 09:30</td>
+                                            <td class="py-4 px-6">Teori Bahasa dan Otomata</td>
+                                            <td class="py-4 px-6">C</td>
+                                            <td class="py-4 px-6">3</td>
+                                            <td class="text-left py-4 px-6">Priyo Sidik Sasongko, S.Si., M.Kom.<br>Etna Vianita, S.Mat., M.Mat.<br>Dr. Yeva Fadillah Ashari, S.Si., M.Si.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="flex justify-center space-x-4 mt-6">
+                                    <button class="bg-green-500 text-white px-4 py-2 rounded-full">Setujui IRS</button>
+                                    <button class="bg-yellow-500 text-white px-4 py-2 rounded-full">Berikan Izin Melakukan Perubahan IRS</button>
+                                </div>
                             </div>
                         </li>
                         <!-- Tambahkan semester lainnya dengan struktur yang sama -->

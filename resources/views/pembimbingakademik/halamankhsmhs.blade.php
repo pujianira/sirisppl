@@ -83,12 +83,37 @@
                                 <span class="accordion-icon">+</span> <!-- Ikon di sini -->
                             </button>
                             <div class="accordion-content mt-2 hidden text-gray-400">
-                                <p>Detail mata kuliah:</p>
-                                <ul class="pl-4 list-disc">
-                                    <li>Dasar Pemrograman - 3 SKS</li>
-                                    <li>Matematika I - 2 SKS</li>
-                                    <li>Olahraga - 1 SKS</li>
-                                </ul>
+                            <div class="flex justify-center items-center">
+                           </div>
+                                <table class="w-full text-sm text-center text-white">
+                                    <thead class="text-sm uppercase bg-gray-800 text-white">
+                                        <tr>
+                                            <th scope="col" class="py-3 px-6">NO</th>
+                                            <th scope="col" class="py-3 px-6">KODE</th>
+                                            <th scope="col" class="py-3 px-6">MATA KULIAH</th>
+                                            <th scope="col" class="py-3 px-6">JENIS</th>
+                                            <th scope="col" class="py-3 px-6">STATUS</th>
+                                            <th scope="col" class="py-3 px-6">SKS</th>
+                                            <th scope="col" class="py-3 px-6">NILAI HURUF</th>
+                                            <th scope="col" class="py-3 px-6">BOBOT</th>
+                                            <th scope="col" class="py-3 px-6">SKS x BOBOT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-gray-700 border-b border-gray-700">
+                                            <td class="py-4 px-6">1</td>
+                                            <td class="py-4 px-6">PAIK6702</td>
+                                            <td class="py-4 px-6">Teori Bahasa dan Otomata</td>
+                                            <td class="py-4 px-6">PILIHAN</td>
+                                            <td class="py-4 px-6">BARU</td>
+                                            <td class="py-4 px-6">3</td>
+                                            <td class="py-4 px-6">A</td>
+                                            <td class="py-4 px-6">4</td>
+                                            <td class="py-4 px-6">12</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span class="text-white text-md font-bold mt-4 block">IP Semester: </span>
                             </div>
                         </li>
                         <!-- Accordion Item 2 -->
