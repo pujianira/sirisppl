@@ -12,7 +12,7 @@
                     <div class="flex items-center space-x-4">
                         <div class="flex items-center space-x-2">
                             <i class="fas fa-user-circle text-white text-2xl"></i>
-                            <span class="text-white">Halo! Nabila Betari</span>
+                            <span class="text-white">Halo! Anjani Betari</span>
                         </div>
                         <i class="fas fa-cog text-white text-xl"></i>
                         <i class="fas fa-bell text-white text-xl"></i>
