@@ -32,10 +32,10 @@ class HomeController extends Controller
         return view('mahasiswa.herreg'); // Adjust the view path as necessary
     }
 
-    public function kaprodiDashboard()
-    {
-        return view('kaprodi.dashboard');
-    }
+    // public function kaprodiDashboard()
+    // {
+    //     return view('kaprodi.dashboard');
+    // }
 
     public function dekanDashboard()
     {
@@ -46,4 +46,19 @@ class HomeController extends Controller
     {
         return view('bagianakademik.dashboard');
     }
+
+    public function kaprodiDashboard()
+    {
+        // Get the authenticated user
+        $user = Auth::user();
+    
+        // Retrieve the mahasiswa record based on the authenticated user's email
+        $kaprodi = User::where('email', $user->email)->firstOrFail();
+    
+        // Pass the necessary user data to the view
+        return view('kaprodi.dashboard', [
+            'user' => $kaprodi // Pass the whole mahasiswa object
+        ]);
+    }
+
 }

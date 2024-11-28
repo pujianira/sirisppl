@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JadwalController;
 
 Route::get('/', function () {
     return view('auth/login');
@@ -81,6 +82,10 @@ Route::get('kaprodi/buatjadwalbaru', function () {
 Route::get('kaprodi/formjadwal', function () {
     return view('kaprodi/formjadwal');
 });
+
+Route::get('kaprodi/createjadwal', [JadwalController::class, 'create'])->name('createjadwal');
+
+Route::post('kaprodi/storejadwal', [JadwalController::class, 'store'])->name('storejadwal');
 
 //pembimbing akademik
 Route::get('mahasiswa/dashboard', [HomeController::class, 'mahasiswaDashboard'])->name('mahasiswa.dashboard');
